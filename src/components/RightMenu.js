@@ -12,41 +12,41 @@ function RightMenu({ open, onClose }) {
         zIndex: '-1',
         position: 'relative',
         backgroundColor: '#19172C',
-        display: 'block'
+        display: 'block',
       }}
       PaperProps={{
         sx: {
           backgroundColor: "#19172C",
-          width: 1 / 6,
           border: "1px solid #BFBFCD"
         },
       }}
     >
       {/* Icon buttons */}
-      <div style={{ display: 'flex', padding: 10, justifyContent: 'space-between', marginTop: '30%' }}>
+      <div style={{ display: 'flex', padding: 10,  marginTop: '35%' }}>
 
         <Button style={{ color:'#fff',backgroundColor: '#322E58', marginRight: 10,boxShadow: '0px 4px 8px rgba(0.5, 0.5, 0.5, 0.5)' }}>
           <MessageIcon />
         </Button>
 
-        <Button fullWidth variant="text" style={{ color:'#fff',backgroundColor: '#322E58', boxShadow: '0px 4px 8px rgba(0.9, 0.5, 0.5, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', borderRadius: '5px'}}>
-          <Avatar sx={{ bgcolor: 'secondary.main', marginRight: '15px' }}>
+        <Button fullWidth variant="text" style={{ color:'#fff',backgroundColor: '#322E58', boxShadow: '0px 4px 8px rgba(0.5, 0.5, 0.5, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', borderRadius: '5px'}}>
+          <Avatar sx={{ bgcolor: 'secondary.main', width: '32px', height: '32px', marginRight: '8px'}}>
             🇺🇸
           </Avatar>
           English chat
-          <div style={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}>
-            <div style={{ backgroundColor: 'red', borderRadius: '50%', width: '10px', height: '10px', marginRight: '5px' }} />
+          <div style={{ display: 'flex', alignItems: 'center', marginLeft: 'auto', marginRight: '8px'}}>
+            <div style={{ backgroundColor: 'red', borderRadius: '50%', width: '10px', height: '10px', marginRight: '4px'}} />
             <div style={{ color: '#FFFFFF' }}>812</div>
           </div>
         </Button>
+
       </div>
 
       {/* Input area for message */}
       <List style={{ marginTop: 'auto', marginBottom: '10px' }}>
         <ListItem>
           <TextField
-            fullWidth
-            variant="outlined"
+            // fullWidth
+            // variant="outlined"
             placeholder="Say Something ..."
             style={{ backgroundColor: '#2B293D', color: '#FFFFFF', borderRadius: '15px', border: '2px solid pink' }} // Remove blue outline on focus
             InputProps={{
