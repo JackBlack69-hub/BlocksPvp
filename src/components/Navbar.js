@@ -5,12 +5,14 @@ import logo from "./Logopvp.png"
 
 function Navbar() {
   return (
-    <AppBar position="static" style={{ backgroundColor: '#19172C', paddingRight: '0', paddingLeft: '0', display: 'block' }}> {/* Specify custom color with opacity */}
+    <AppBar position="static" style={{ backgroundColor: '#19172C', paddingRight: '0', paddingLeft: '0', display: 'block' }}>
       <Toolbar style={{paddingRight: '0', paddingLeft: '0' }}>
-        {/* <Typography variant="h7">Navbar</Typography> */}
         <img src={logo} />
+        <div>
+          CoinFlip
+        </div>
         <div style={{backgroundColor: '#0D0B1B', width: '100%',alignSelf: 'baseline'}}> 
-          JK Raffel
+          1K Raffel
         </div>
       </Toolbar>
     </AppBar>

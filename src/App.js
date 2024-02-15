@@ -7,26 +7,21 @@ import RightMenu from './components/RightMenu';
 
 function App() {
   return (
-    <>
-    
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
-    <div style={{width: '100%'}}>
-    <Navbar />
-
-    </div>
-   
-   <div>
-   <div>
-        <LeftMenu />
+    <> 
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div style={{width: '100%'}}>
+          <Navbar />
+        </div>
+        <div>
+          <div>
+            <LeftMenu />
+          </div>
+          <div>
+            <RightMenu />
+          </div>
+        </div>
       </div>
-      <div>
-        <RightMenu />
-      </div>
-
-   </div>
-      
-    </div>
-  </>
+    </>
     
         
   );
