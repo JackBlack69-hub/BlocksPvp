@@ -1,8 +1,8 @@
 // LeftMenu.js
 import React from "react";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
-import coinflipImg from "../components/coinflip.png";
-import jackpotImg from "../components/jackpot.png";
+import coinflipImg from "./assets/coinflip.png";
+import jackpotImg from "./assets/jackpot.png";
 
 function LeftMenu({ open, onClose }) {
   return (

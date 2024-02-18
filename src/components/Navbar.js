@@ -1,7 +1,7 @@
 // Navbar.js
 import React from "react";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
-import logo from "./Logopvp.png";
+import logo from "./assets/Logopvp.png";
 import UpperNavbar from "./UpperNavbar";
 import { sizing } from "@mui/system";
 
