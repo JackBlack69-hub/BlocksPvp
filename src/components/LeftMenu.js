@@ -9,20 +9,24 @@ function LeftMenu({ open, onClose }) {
     <Drawer
       variant="permanent"
       anchor="left"
-      style={{ zIndex: "-1", position: "relative", backgroundColor: "#19172C" }}
       PaperProps={{
         sx: {
           backgroundColor: "#19172C", // Your desired color
+          position: "relative",
+
+          height: "100%", // Set height to 100%
         },
       }}
     >
-      <List style={{ marginTop: "30%" }}>
+      <List
+        style={{ height: "100%", display: "flex", flexDirection: "column" }}
+      >
         <ListItem style={{ color: "#9F9DA7", paddingLeft: "0" }} button>
           {/* <ListItemText primary="Coinflip" /> */}
-          <img src={coinflipImg}></img>
+          <img src={coinflipImg} alt="Coinflip" />
         </ListItem>
         <ListItem style={{ color: "#9F9DA7", paddingLeft: "20%" }} button>
-          <img src={jackpotImg}></img>
+          <img src={jackpotImg} alt="Jackpot" />
         </ListItem>
       </List>
 
