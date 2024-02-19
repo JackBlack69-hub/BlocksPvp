@@ -22,7 +22,6 @@ function LeftMenu({ open, onClose }) {
         style={{ height: "100%", display: "flex", flexDirection: "column" }}
       >
         <ListItem style={{ color: "#9F9DA7", paddingLeft: "0" }} button>
-          {/* <ListItemText primary="Coinflip" /> */}
           <img src={coinflipImg} alt="Coinflip" />
         </ListItem>
         <ListItem style={{ color: "#9F9DA7", paddingLeft: "20%" }} button>
