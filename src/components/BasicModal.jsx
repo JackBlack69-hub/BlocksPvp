@@ -6,6 +6,7 @@ import Modal from "@mui/material/Modal";
 import LoginImg from "./assets/Login.png";
 import { TextField } from "@mui/material";
 import { generate, count } from "random-words";
+import axios from "axios";
 
 const style = {
   position: "absolute",
@@ -59,6 +60,26 @@ export default function BasicModal() {
       setGeneratedCode(words);
     }
   };
+
+const handleLogin = () => {
+  const url = 'http://localhost:9000/api/user/login';
+  const body = {
+    username: username,
+    description: generatedCode,
+  };
+
+  axios.post(url, body)
+    .then(response => {
+      console.log(response)
+      if(response.data.statusCode === 200){
+        setOpen(false)
+      }
+      console.log(response.data);
+    })
+    .catch(error => {
+      console.error('There was a problem with the axios request:', error);
+    });
+}
 
   return (
     <div style={{ display: "inline" }}>
@@ -177,6 +198,7 @@ export default function BasicModal() {
                         background:
                           "linear-gradient(180deg, #A448FF 0%, #873AFF 100%)",
                       }}
+                      onClick={handleLogin}
                     >
                       Done
                     </Button>
