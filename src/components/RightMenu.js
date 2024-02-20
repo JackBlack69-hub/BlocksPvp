@@ -12,13 +12,25 @@ import {
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import MessageIcon from "@mui/icons-material/Message";
+import styles from "./RightMenu.module.css";
 
 function RightMenu({ open, onClose }) {
   // Dummy chat messages
   const chatMessages = [
     { user: "User 1", text: "Hello there!" },
+    { user: "User 1", text: "Hello there!" },
+    { user: "User 1", text: "Hello there!" },
+    { user: "User 1", text: "Hello there!" },
+    { user: "User 1", text: "Hello there!" },
+    { user: "User 1", text: "Hello there!" },
+    { user: "User 1", text: "Hello there!" },
+    { user: "User 1", text: "Hello there!" },
+    { user: "User 1", text: "Hello there!" },
     { user: "User 2", text: "Hi, how can I help you?" },
-    { user: "User 1", text: "I have a question about..." },
+    {
+      user: "User 1",
+      text: `Hello, I’m just trying to navigate to the crashgamemode on this amazing number one MM2Game Arcade!`,
+    },
   ];
 
   return (
@@ -29,6 +41,9 @@ function RightMenu({ open, onClose }) {
         sx: {
           backgroundColor: "#19172C", // Your desired color
           position: "relative",
+          borderLeft: "2px solid #322e58",
+          backgroundBlendMode: "overlay, normal",
+          background: `linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #0f0c1f`,
         },
       }}
     >
@@ -37,9 +52,9 @@ function RightMenu({ open, onClose }) {
         <Button
           style={{
             color: "#fff",
-            backgroundColor: "#322E58",
-            marginRight: 10,
-            boxShadow: "0px 4px 8px rgba(0.5, 0.5, 0.5, 0.5)",
+            background: "linear-gradient(180deg, #1A182E 0%, #1F1736 100%)",
+            marginRight: "10px",
+            borderRadius: 3,
           }}
         >
           <MessageIcon />
@@ -49,14 +64,14 @@ function RightMenu({ open, onClose }) {
           fullWidth
           variant="text"
           style={{
+            borderRadius: "3px",
+            background: "linear-gradient(180deg, #151329 0%, #1f1736 100%)",
             color: "#fff",
-            backgroundColor: "#322E58",
-            boxShadow: "0px 4px 8px rgba(0.5, 0.5, 0.5, 0.5)",
             display: "flex",
             alignItems: "center",
             justifyContent: "flex-start",
-            borderRadius: "5px",
           }}
+          className={styles.chatTitle}
         >
           <Avatar
             sx={{
@@ -92,38 +107,80 @@ function RightMenu({ open, onClose }) {
       </div>
 
       {/* Dummy chat text fields */}
-      <List
+      <div
         style={{
-          marginTop: "auto",
-          marginBottom: "10px",
-          maxHeight: "calc(100vh - 200px)",
-          overflowY: "auto",
+          position: "relative",
         }}
       >
-        {chatMessages.map((message, index) => (
-          <ListItem key={index}>
-            <Paper
-              style={{
-                display: "flex",
-                padding: 10,
-                flexDirection: "row",
-                height: 100,
-                alignItems: "center",
-                width: "100%",
-                borderRadius: 20,
-              }}
-            >
-              <div style={{ marginRight: 10 }}>
-                <Avatar />
-              </div>
-              <div>
-                <Typography variant="subtitle2">{message.user}</Typography>
-                <Typography variant="body2">{message.text}</Typography>
-              </div>
-            </Paper>
-          </ListItem>
-        ))}
-      </List>
+        <List
+          style={{
+            marginTop: "auto",
+            marginBottom: "10px",
+            maxHeight: "calc(100vh - 200px)",
+            overflowY: "auto",
+            flexGrow: 1,
+            position: "static",
+          }}
+        >
+          <div className={styles.topShadow}></div>
+          <div className={styles.bottomShadow}></div>
+          <div
+            style={{
+              height: "100%",
+            }}
+          >
+            {chatMessages.map((message, index) => (
+              <ListItem key={index}>
+                <Paper
+                  style={{
+                    display: "flex",
+                    padding: 10,
+                    flexDirection: "row",
+                    height: 100,
+                    alignItems: "center",
+                    width: "100%",
+                    borderRadius: "20px",
+                    background:
+                      "linear-gradient(180deg, #1F1F2D 0%, #1F1F2D 100%)",
+                  }}
+                >
+                  <div
+                    style={{
+                      border: "2px solid #863AFF",
+                      borderRadius: "50%",
+                      marginRight: 10,
+                    }}
+                  >
+                    <Avatar />
+                  </div>
+                  <div>
+                    <Typography
+                      variant="subtitle2"
+                      style={{
+                        fontSize: "1.2rem",
+                        color: "#863AFF",
+                        opacity: 0.5,
+                      }}
+                    >
+                      {message.user}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontSize: "1rem",
+                        color: "#BFBFCD",
+                        opacity: 0.5,
+                      }}
+                    >
+                      {message.text}
+                    </Typography>
+                  </div>
+                </Paper>
+              </ListItem>
+            ))}
+          </div>
+        </List>
+      </div>
 
       {/* Input area for message */}
       <List>
@@ -131,17 +188,16 @@ function RightMenu({ open, onClose }) {
           <TextField
             // variant="outlined"
             placeholder="Say Something ..."
-            style={{
-              backgroundColor: "#2B293D",
-              color: "#FFFFFF",
-              borderRadius: "15px",
-              border: "2px solid pink",
-            }}
+            style={{ width: "100%" }}
             InputProps={{
-              style: { color: "#FFFFFF" },
+              style: { color: "#BFBFCD" },
               endAdornment: (
                 <IconButton edge="end">
-                  <SendIcon style={{ color: "#FFFFFF" }} />
+                  <SendIcon
+                    style={{
+                      color: "#863AFF",
+                    }}
+                  />
                 </IconButton>
               ),
             }}
