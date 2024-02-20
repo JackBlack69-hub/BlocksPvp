@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Drawer,
   Paper,
@@ -16,23 +16,22 @@ import styles from "./RightMenu.module.css";
 import pfpImg from "./assets/pfp.png";
 
 function RightMenu({ open, onClose }) {
-  // Dummy chat messages
-  const chatMessages = [
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 1", text: "Hello there!" },
-    { user: "User 2", text: "Hi, how can I help you?" },
-    {
-      user: "User 1",
-      text: `Hello, I’m just trying to navigate to the crashgamemode on this amazing number one MM2Game Arcade!`,
-    },
-  ];
+  const [inputValue, setInputValue] = useState("");
+  const [chatMessages, setChatMessages] = useState([]);
+
+  const handleSendMessage = () => {
+    if (inputValue.trim() !== "") {
+      const newMessage = { user: "User", text: inputValue };
+      setChatMessages([...chatMessages, newMessage]);
+      setInputValue("");
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSendMessage();
+    }
+  };
 
   return (
     <Drawer
@@ -41,7 +40,7 @@ function RightMenu({ open, onClose }) {
       style={{ flexBasis: "25%", backgroundColor: "#0F0C1F" }}
       PaperProps={{
         sx: {
-          backgroundColor: "#19172C", // Your desired color
+          backgroundColor: "#19172C",
           position: "relative",
           borderTop: "3px solid #322E58",
         },
@@ -152,7 +151,7 @@ function RightMenu({ open, onClose }) {
                       marginRight: 10,
                     }}
                   >
-                    <img src={pfpImg}></img>
+                    <img src={pfpImg} alt="Profile" />
                   </div>
                   <div>
                     <Typography
@@ -192,7 +191,7 @@ function RightMenu({ open, onClose }) {
             InputProps={{
               style: { color: "#BFBFCD" },
               endAdornment: (
-                <IconButton edge="end">
+                <IconButton edge="end" onClick={handleSendMessage}>
                   <SendIcon
                     style={{
                       color: "#863AFF",
@@ -204,6 +203,9 @@ function RightMenu({ open, onClose }) {
             InputLabelProps={{
               style: { color: "#FFFFFF" },
             }}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </ListItem>
       </List>
