@@ -28,6 +28,8 @@ export default function UpperNavbar() {
       <Box
         style={{
           color: "rgba(255, 255, 255, 0.50)",
+          paddingInline: "1.5rem",
+          paddingBlock: "0.2rem",
           boxShadow:
             "2px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         }}
@@ -46,6 +48,9 @@ export default function UpperNavbar() {
             borderRight: "1px solid #0D0B1B",
             paddingRight: "4px",
             fullWidth: true,
+            "&:hover": {
+              background: "transparent",
+            },
           }}
         >
           {" "}
@@ -57,6 +62,9 @@ export default function UpperNavbar() {
             textTransform: "capitalize",
             borderRight: "1px solid #0D0B1B",
             paddingRight: "4px",
+            "&:hover": {
+              background: "transparent",
+            },
           }}
         >
           {" "}
@@ -66,6 +74,9 @@ export default function UpperNavbar() {
           sx={{
             color: "rgba(255, 255, 255, 0.50)",
             textTransform: "capitalize",
+            "&:hover": {
+              background: "transparent",
+            },
           }}
         >
           Fairness
