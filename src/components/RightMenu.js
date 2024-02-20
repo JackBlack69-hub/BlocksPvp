@@ -13,6 +13,7 @@ import {
 import SendIcon from "@mui/icons-material/Send";
 import MessageIcon from "@mui/icons-material/Message";
 import styles from "./RightMenu.module.css";
+import pfpImg from "./assets/pfp.png";
 
 function RightMenu({ open, onClose }) {
   // Dummy chat messages
@@ -37,14 +38,12 @@ function RightMenu({ open, onClose }) {
     <Drawer
       variant="permanent"
       anchor="right"
-      style={{ flexBasis: "25%" }}
+      style={{ flexBasis: "25%", backgroundColor: "#0F0C1F" }}
       PaperProps={{
         sx: {
           backgroundColor: "#19172C", // Your desired color
           position: "relative",
-          borderLeft: "2px solid #322e58",
-          backgroundBlendMode: "overlay, normal",
-          background: `linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #0f0c1f`,
+          borderTop: "3px solid #322E58",
         },
       }}
     >
@@ -137,7 +136,8 @@ function RightMenu({ open, onClose }) {
                     display: "flex",
                     padding: 10,
                     flexDirection: "row",
-                    height: 100,
+                    paddingBlock: "5% 5%",
+
                     alignItems: "center",
                     width: "100%",
                     borderRadius: "20px",
@@ -152,7 +152,7 @@ function RightMenu({ open, onClose }) {
                       marginRight: 10,
                     }}
                   >
-                    <Avatar />
+                    <img src={pfpImg}></img>
                   </div>
                   <div>
                     <Typography
@@ -160,7 +160,6 @@ function RightMenu({ open, onClose }) {
                       style={{
                         fontSize: "1.2rem",
                         color: "#863AFF",
-                        opacity: 0.5,
                       }}
                     >
                       {message.user}

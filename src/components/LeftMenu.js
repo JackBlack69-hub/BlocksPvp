@@ -13,8 +13,7 @@ function LeftMenu({ open, onClose }) {
         sx: {
           backgroundColor: "#19172C", // Your desired color
           position: "relative",
-
-          height: "100%", // Set height to 100%
+          height: "100%",
         },
       }}
     >
