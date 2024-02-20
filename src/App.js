@@ -11,6 +11,7 @@ function App() {
       style={{ height: "100vh", display: "flex", flexDirection: "column" }}
     >
       <Navbar />
+
       <div
         style={{
           display: "flex",
@@ -20,6 +21,7 @@ function App() {
         }}
       >
         <LeftMenu />
+        <div style={{ height: "100%", backgroundColor: "black" }}></div>
         <RightMenu />
       </div>
     </div>

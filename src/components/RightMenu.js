@@ -37,6 +37,7 @@ function RightMenu({ open, onClose }) {
     <Drawer
       variant="permanent"
       anchor="right"
+      style={{ flexBasis: "25%" }}
       PaperProps={{
         sx: {
           backgroundColor: "#19172C", // Your desired color
@@ -116,7 +117,7 @@ function RightMenu({ open, onClose }) {
           style={{
             marginTop: "auto",
             marginBottom: "10px",
-            maxHeight: "calc(100vh - 200px)",
+            height: "70vh",
             overflowY: "auto",
             flexGrow: 1,
             position: "static",
