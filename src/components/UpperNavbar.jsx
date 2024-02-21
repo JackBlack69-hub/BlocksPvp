@@ -22,6 +22,8 @@ export default function UpperNavbar() {
           textTransform: "capitalize",
           marginLeft: "2%",
           color: "#863AFF",
+          fontWeight: "600",
+          textShadow: "rgb(60 40 81 / 60%) 0px 4px 4px;",
         }}
       >
         {" "}
