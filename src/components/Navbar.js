@@ -98,6 +98,20 @@ function Navbar() {
               <div>
                 <img src={logoImg2}></img>
               </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  paddingLeft: "10px",
+                  paddingRight: "10px",
+                }}
+              >
+                <div>Use Code - BLOXPVP</div>
+                <div>Level 39</div>
+              </div>
+              <div>
+                <button>Icon</button>
+              </div>
             </div>
           </div>
         </div>
