@@ -236,6 +236,7 @@ function RightMenu() {
                         fontSize: "1rem",
                         color: "#BFBFCD",
                         opacity: 0.5,
+                        wordBreak: "break-all",
                       }}
                     >
                       {message.text}
