@@ -229,6 +229,7 @@ function RightMenu() {
               style: {
                 color: "#FFFFFF",
                 borderRadius: "12px",
+                border: "2px solid #863AFF",
               },
               endAdornment: (
                 <IconButton edge="end" onClick={handleSendMessage}>
