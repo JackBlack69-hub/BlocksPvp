@@ -14,8 +14,6 @@ export default function UpperNavbar() {
         // display: "block",
         display: "flex",
         alignItems: "center",
-        padding: "0.25rem 0rem",
-        gap: "2rem",
       }}
     >
       <Button
