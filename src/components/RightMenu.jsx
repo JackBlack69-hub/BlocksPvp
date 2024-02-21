@@ -20,24 +20,33 @@ function RightMenu() {
     {
       user: "NormsDemise",
       text: "Hello, I'm just trying to navigate to the crash gamemode on this amazing number!",
+      time: "10:58",
     },
     {
       user: "NormsDemise",
       text: "Hello, I'm just trying to navigate to the crash gamemode on this amazing number!",
+      time: "10:58",
     },
     {
       user: "NormsDemise",
       text: "Hello, I'm just trying to navigate to the crash gamemode on this amazing number!",
+      time: "10:58",
     },
     {
       user: "NormsDemise",
       text: "Hello, I'm just trying to navigate to the crash gamemode on this amazing number!",
+      time: "10:58",
     },
   ]);
 
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
-      const newMessage = { user: "NormsDemise", text: inputValue };
+      const newMessage = {
+        user: "NormsDemise",
+        text: inputValue,
+        time: "10:58",
+      };
+
       setChatMessages([...chatMessages, newMessage]);
       setInputValue("");
     }
@@ -191,16 +200,36 @@ function RightMenu() {
                   >
                     <img src={pfpImg} alt="Profile" />
                   </div>
-                  <div>
-                    <Typography
-                      variant="subtitle2"
+                  <div style={{ width: "100%" }}>
+                    <div
                       style={{
-                        fontSize: "1.4rem",
-                        color: "#863AFF",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
                       }}
                     >
-                      {message.user}
-                    </Typography>
+                      <Typography
+                        variant="subtitle2"
+                        style={{
+                          fontSize: "1.4rem",
+                          color: "#863AFF",
+                        }}
+                      >
+                        {message.user}
+                      </Typography>
+                      <span
+                        style={{
+                          color: "#FFFFFF",
+                          background: "#45444461",
+                          padding: "0.2rem 0.5rem",
+                          borderRadius: "12px",
+                          fontSize: "0.9rem",
+                          opacity: 0.5,
+                        }}
+                      >
+                        {message.time}
+                      </span>
+                    </div>
                     <Typography
                       variant="body2"
                       style={{
