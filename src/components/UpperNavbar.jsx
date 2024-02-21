@@ -11,8 +11,8 @@ export default function UpperNavbar() {
         backgroundColor: "#0D0B1B",
         borderBottomLeftRadius: "10px",
         paddingLeft: "0",
+        display: "block",
       }}
-      sx={{ width: "100%", height: "25%", alignSelf: "baseline" }}
     >
       <Button
         style={{
@@ -108,7 +108,7 @@ export default function UpperNavbar() {
       >
         <img src={discordImg}></img>
       </button>
-      <BasicModal />
+      {/* <BasicModal /> */}
     </Box>
   );
 }

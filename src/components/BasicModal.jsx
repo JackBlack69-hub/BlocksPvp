@@ -61,31 +61,32 @@ export default function BasicModal() {
     }
   };
 
-const handleLogin = () => {
-  const url = 'http://localhost:9000/api/user/login';
-  const body = {
-    username: username,
-    description: generatedCode,
-  };
+  const handleLogin = () => {
+    const url = "http://localhost:9000/api/user/login";
+    const body = {
+      username: username,
+      description: generatedCode,
+    };
 
-  axios.post(url, body)
-    .then(response => {
-      console.log(response)
-      if(response.data.statusCode === 200){
-        setOpen(false)
-      }
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.error('There was a problem with the axios request:', error);
-    });
-}
+    axios
+      .post(url, body)
+      .then((response) => {
+        console.log(response);
+        if (response.data.statusCode === 200) {
+          setOpen(false);
+        }
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("There was a problem with the axios request:", error);
+      });
+  };
 
   return (
     <div style={{ display: "inline" }}>
-      <Button style={{ float: "right" }} onClick={handleOpen}>
+      {/* <Button style={{ float: "right" }} onClick={handleOpen}>
         Login
-      </Button>
+      </Button> */}
       <Modal
         open={open}
         onClose={handleClose}

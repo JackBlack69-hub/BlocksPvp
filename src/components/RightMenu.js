@@ -44,6 +44,7 @@ function RightMenu({ open, onClose }) {
           backgroundColor: "#19172C",
           position: "relative",
           borderTop: "3px solid #322E58",
+          flexBasis: "20%",
         },
       }}
     >
