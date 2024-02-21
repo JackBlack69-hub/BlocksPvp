@@ -177,8 +177,9 @@ function RightMenu() {
                     alignItems: "center",
                     width: "100%",
                     borderRadius: "20px",
-                    background:
-                      "linear-gradient(180deg, #1F1F2D 0%, #1F1F2D 100%)",
+                    background: "rgb(29 29 53)",
+                    // background:
+                    //   "linear-gradient(180deg, #1F1F2D 0%, #1F1F2D 100%)",
                   }}
                 >
                   <div
