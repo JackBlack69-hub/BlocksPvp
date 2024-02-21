@@ -88,10 +88,16 @@ function Navbar() {
               <button>Deposit</button>
             </div>
 
-            <div>
-              <button>Withdraw</button>
-              <button>Icon</button>
-              <img src={logoImg2}></img>
+            <div style={{ display: "flex" }}>
+              <div>
+                <button>Withdraw</button>
+              </div>
+              <div>
+                <button>Icon</button>
+              </div>
+              <div>
+                <img src={logoImg2}></img>
+              </div>
             </div>
           </div>
         </div>
