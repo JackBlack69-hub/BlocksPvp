@@ -7,22 +7,37 @@ import {
   Button,
   TextField,
   IconButton,
-  Avatar,
   Typography,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
-import MessageIcon from "@mui/icons-material/Message";
 import styles from "./RightMenu.module.css";
 import pfpImg from "./assets/pfp.png";
 import usaIcon from "./assets/usaIcon.png";
 
-function RightMenu({ open, onClose }) {
+function RightMenu() {
   const [inputValue, setInputValue] = useState("");
-  const [chatMessages, setChatMessages] = useState([]);
+  const [chatMessages, setChatMessages] = useState([
+    {
+      user: "NormsDemise",
+      text: "Hello, I'm just trying to navigate to the crash gamemode on this amazing number!",
+    },
+    {
+      user: "NormsDemise",
+      text: "Hello, I'm just trying to navigate to the crash gamemode on this amazing number!",
+    },
+    {
+      user: "NormsDemise",
+      text: "Hello, I'm just trying to navigate to the crash gamemode on this amazing number!",
+    },
+    {
+      user: "NormsDemise",
+      text: "Hello, I'm just trying to navigate to the crash gamemode on this amazing number!",
+    },
+  ]);
 
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
-      const newMessage = { user: "User", text: inputValue };
+      const newMessage = { user: "NormsDemise", text: inputValue };
       setChatMessages([...chatMessages, newMessage]);
       setInputValue("");
     }
@@ -49,12 +64,13 @@ function RightMenu({ open, onClose }) {
       }}
     >
       {/* Icon buttons */}
-      <div style={{ display: "flex", padding: 10 }}>
+      <div style={{ display: "flex", padding: 10, background: "#120e25" }}>
         <Button
           style={{
             background: "linear-gradient(180deg, #1A182E 0%, #1F1736 100%)",
             marginRight: "10px",
             borderRadius: 3,
+            padding: "0.75rem",
           }}
         >
           {/* <MessageIcon /> */}
@@ -84,6 +100,7 @@ function RightMenu({ open, onClose }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "flex-start",
+            padding: "0.75rem",
           }}
           className={styles.chatTitle}
         >
@@ -152,10 +169,10 @@ function RightMenu({ open, onClose }) {
               <ListItem key={index}>
                 <Paper
                   style={{
+                    border: "2px solid #863aff30",
                     display: "flex",
-                    padding: 10,
+                    padding: "1.5rem 1rem",
                     flexDirection: "row",
-                    paddingBlock: "5% 5%",
 
                     alignItems: "center",
                     width: "100%",
@@ -168,7 +185,7 @@ function RightMenu({ open, onClose }) {
                     style={{
                       border: "2px solid #863AFF",
                       borderRadius: "50%",
-                      marginRight: 10,
+                      marginRight: "1.5rem",
                     }}
                   >
                     <img src={pfpImg} alt="Profile" />
@@ -177,7 +194,7 @@ function RightMenu({ open, onClose }) {
                     <Typography
                       variant="subtitle2"
                       style={{
-                        fontSize: "1.2rem",
+                        fontSize: "1.4rem",
                         color: "#863AFF",
                       }}
                     >
@@ -202,19 +219,23 @@ function RightMenu({ open, onClose }) {
       </div>
 
       {/* Input area for message */}
-      <List>
+      <List style={{ background: "#120e25" }}>
         <ListItem>
           <TextField
             // variant="outlined"
             placeholder="Say Something ..."
             style={{ width: "100%" }}
             InputProps={{
-              style: { color: "#BFBFCD" },
+              style: {
+                color: "#FFFFFF",
+                borderRadius: "12px",
+              },
               endAdornment: (
                 <IconButton edge="end" onClick={handleSendMessage}>
                   <SendIcon
                     style={{
                       color: "#863AFF",
+                      transform: "translateY(-3px) rotateZ(-45deg)",
                     }}
                   />
                 </IconButton>
