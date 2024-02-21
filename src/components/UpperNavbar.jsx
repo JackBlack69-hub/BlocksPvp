@@ -11,7 +11,10 @@ export default function UpperNavbar() {
         backgroundColor: "#0D0B1B",
         borderBottomLeftRadius: "10px",
         paddingLeft: "0",
-        display: "block",
+        // display: "block",
+        display: "flex",
+        alignItems: "center",
+        padding: "0.5rem 0rem",
       }}
     >
       <Button
@@ -28,15 +31,15 @@ export default function UpperNavbar() {
       <Box
         style={{
           color: "rgba(255, 255, 255, 0.50)",
-          paddingInline: "1.5rem",
-          paddingBlock: "0.2rem",
+          paddingInline: "4rem",
+          paddingBlock: "0.25rem",
           boxShadow:
             "2px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         }}
         sx={{
           display: "inline",
           backgroundColor: "#19172C",
-          borderRadius: "3px",
+          borderRadius: "5px",
           opacity: 1,
         }}
       >
@@ -46,11 +49,12 @@ export default function UpperNavbar() {
             color: "rgba(255, 255, 255, 0.50)",
             textTransform: "capitalize",
             borderRight: "1px solid #0D0B1B",
-            paddingRight: "4px",
             fullWidth: true,
             "&:hover": {
               background: "transparent",
             },
+            padding: 0,
+            paddingRight: "1.5rem",
           }}
         >
           {" "}
@@ -61,10 +65,11 @@ export default function UpperNavbar() {
             color: "rgba(255, 255, 255, 0.50)",
             textTransform: "capitalize",
             borderRight: "1px solid #0D0B1B",
-            paddingRight: "4px",
             "&:hover": {
               background: "transparent",
             },
+            padding: 0,
+            paddingInline: "1.5rem",
           }}
         >
           {" "}
@@ -77,6 +82,8 @@ export default function UpperNavbar() {
             "&:hover": {
               background: "transparent",
             },
+            padding: 0,
+            paddingLeft: "1.5rem",
           }}
         >
           Fairness
