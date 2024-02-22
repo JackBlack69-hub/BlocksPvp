@@ -1,0 +1,45 @@
+.deposit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.depositNumber,
+.depositText {
+  border: transparent;
+  outline: transparent;
+}
+
+.depositNumber {
+  padding: 1.25rem 1.75rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, #0f0c1f 0%, #201936 100%), #863aff;
+}
+
+.depositNumber > span {
+  font-size: 0.7rem;
+  color: #837878;
+}
+
+.depositText {
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+
+  padding: 1.25rem 1rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #863aff;
+
+  background-blend-mode: overlay, normal;
+}

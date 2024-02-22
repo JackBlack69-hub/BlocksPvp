@@ -7,6 +7,7 @@ import { sizing } from "@mui/system";
 import logoImg2 from "./assets/logo2.png";
 import notificationImg from "./assets/notification.svg";
 import bellImg from "./assets/bell.png";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
   const [selectedButton, setSelectedButton] = useState(null);
@@ -43,9 +44,17 @@ function Navbar() {
               display: "flex",
               justifyContent: "space-between",
               color: "white",
+              paddingBlock: "1rem",
             }}
           >
-            <div style={{ display: "flex", gap: 10 }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 10,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <div>
                 <Button
                   style={{
@@ -54,14 +63,15 @@ function Navbar() {
                     backgroundColor: "transparent",
                     flexDirection: "row",
                     gap: 4,
+                    fontSize: "1.25rem",
                   }}
                   onClick={() => handleButtonClick("coinflip")}
                   button
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="19"
-                    height="19"
+                    width="25"
+                    height="25"
                     viewBox="0 0 19 19"
                     fill="none"
                   >
@@ -82,14 +92,15 @@ function Navbar() {
                     backgroundColor: "transparent",
                     flexDirection: "row",
                     gap: 4,
+                    fontSize: "1.25rem",
                   }}
                   onClick={() => handleButtonClick("jackpot")}
                   button
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="17"
+                    width="25"
+                    height="25"
                     viewBox="0 0 17 17"
                     fill="none"
                   >
@@ -117,9 +128,11 @@ function Navbar() {
               </div>
             </div>
 
-            <div>
-              <button>786</button>
-              <button>Deposit</button>
+            <div className={styles.deposit}>
+              <button className={styles.depositNumber}>
+                786<span>.54</span>
+              </button>
+              <button className={styles.depositText}>Deposit</button>
             </div>
 
             <div style={{ display: "flex" }}>
