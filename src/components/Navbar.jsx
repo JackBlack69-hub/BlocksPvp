@@ -25,6 +25,7 @@ function Navbar() {
         paddingLeft: "0",
         display: "block",
       }}
+      className={styles.navbar}
     >
       <div style={{ paddingRight: "0", paddingLeft: "0", display: "flex" }}>
         <img src={logo} style={{ paddingRight: "3%" }} />
@@ -67,6 +68,9 @@ function Navbar() {
                   }}
                   onClick={() => handleButtonClick("coinflip")}
                   button
+                  className={
+                    selectedButton === "coinflip" ? styles.underline : ""
+                  }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +100,9 @@ function Navbar() {
                   }}
                   onClick={() => handleButtonClick("jackpot")}
                   button
+                  className={
+                    selectedButton === "jackpot" ? styles.underline : ""
+                  }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -135,15 +142,20 @@ function Navbar() {
               <button className={styles.depositText}>Deposit</button>
             </div>
 
-            <div style={{ display: "flex" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <div style={{ paddingRight: "21px" }}>
                 <button
                   style={{
-                    padding: "15%",
                     color: "#3AFF4E",
-
                     background: "linear-gradient(to right, #2F552C, #2C542E)",
                   }}
+                  className={styles.withdraw}
                 >
                   Withdraw
                 </button>
@@ -172,7 +184,13 @@ function Navbar() {
                 }}
               >
                 <div>Use Code - BLOXPVP</div>
-                <div>Level 39</div>
+                <div
+                  style={{
+                    color: "#8000FF",
+                  }}
+                >
+                  Level 39
+                </div>
               </div>
               <div>
                 <button>Icon</button>
