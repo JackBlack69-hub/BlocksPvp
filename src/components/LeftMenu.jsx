@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import { Button, Drawer, List } from "@mui/material";
 import styles from "./LeftMenu.module.css";
 
-function LeftMenu({ open, onClose }) {
-  const [selectedButton, setSelectedButton] = useState("coinflip");
-
+function LeftMenu(props) {
   const handleButtonClick = (button) => {
-    setSelectedButton(button);
+    props.setSelected(button);
   };
 
   return (
@@ -27,14 +25,14 @@ function LeftMenu({ open, onClose }) {
       >
         <Button
           style={{
-            color: selectedButton === "coinflip" ? "#7C00FF" : "#9F9DA7",
+            color: props.selected === "coinflip" ? "#7C00FF" : "#9F9DA7",
             backgroundColor: "transparent",
             flexDirection: "column",
             padding: 28,
           }}
           onClick={() => handleButtonClick("coinflip")}
           button
-          className={selectedButton === "coinflip" ? styles.sideline : ""}
+          className={props.selected === "coinflip" ? styles.sideline : ""}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,21 +43,21 @@ function LeftMenu({ open, onClose }) {
           >
             <path
               d="M22.5 6C24.8733 6 27.1934 6.70379 29.1668 8.02236C31.1402 9.34094 32.6783 11.2151 33.5865 13.4078C34.4948 15.6005 34.7324 18.0133 34.2694 20.3411C33.8064 22.6689 32.6635 24.8071 30.9853 26.4853C29.307 28.1635 27.1688 29.3064 24.8411 29.7694C22.5133 30.2324 20.1005 29.9948 17.9078 29.0866C15.7151 28.1783 13.8409 26.6402 12.5223 24.6668C11.2038 22.6935 10.5 20.3734 10.5 18C10.5 14.8174 11.7643 11.7652 14.0147 9.51472C16.2651 7.26428 19.3174 6 22.5 6ZM4.49997 18C4.5021 19.8594 5.08008 21.6725 6.15447 23.1901C7.22886 24.7076 8.74692 25.8552 10.5 26.475V29.61C7.93198 28.9388 5.65898 27.4352 4.0367 25.3344C2.41442 23.2336 1.53442 20.6543 1.53442 18C1.53442 15.3457 2.41442 12.7664 4.0367 10.6656C5.65898 8.56483 7.93198 7.06118 10.5 6.39V9.525C8.74692 10.1448 7.22886 11.2924 6.15447 12.8099C5.08008 14.3275 4.5021 16.1406 4.49997 18Z"
-              fill={selectedButton === "jackpot" ? "#9F9DA7" : "#7C00FF"}
+              fill={props.selected === "jackpot" ? "#9F9DA7" : "#7C00FF"}
             />
           </svg>
           <div style={{ paddingTop: 15 }}>coinflip</div>
         </Button>
         <Button
           style={{
-            color: selectedButton === "jackpot" ? "#7C00FF" : "#9F9DA7",
+            color: props.selected === "jackpot" ? "#7C00FF" : "#9F9DA7",
             backgroundColor: "transparent",
             flexDirection: "column",
             padding: 28,
           }}
           onClick={() => handleButtonClick("jackpot")}
           button
-          className={selectedButton === "jackpot" ? styles.sideline : ""}
+          className={props.selected === "jackpot" ? styles.sideline : ""}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -70,14 +68,14 @@ function LeftMenu({ open, onClose }) {
           >
             <path
               d="M3.75 15C3.75 16.4774 4.04099 17.9403 4.60636 19.3052C5.17172 20.6701 6.00039 21.9103 7.04505 22.955C8.08971 23.9996 9.3299 24.8283 10.6948 25.3936C12.0597 25.959 13.5226 26.25 15 26.25C16.4774 26.25 17.9403 25.959 19.3052 25.3936C20.6701 24.8283 21.9103 23.9996 22.955 22.955C23.9996 21.9103 24.8283 20.6701 25.3936 19.3052C25.959 17.9403 26.25 16.4774 26.25 15C26.25 13.5226 25.959 12.0597 25.3936 10.6948C24.8283 9.3299 23.9996 8.08971 22.955 7.04505C21.9103 6.00039 20.6701 5.17172 19.3052 4.60636C17.9403 4.04099 16.4774 3.75 15 3.75C13.5226 3.75 12.0597 4.04099 10.6948 4.60636C9.3299 5.17172 8.08971 6.00039 7.04505 7.04505C6.00039 8.08971 5.17172 9.3299 4.60636 10.6948C4.04099 12.0597 3.75 13.5226 3.75 15Z"
-              stroke={selectedButton === "jackpot" ? "#7C00FF" : "#9F9DA7"}
+              stroke={props.selected === "jackpot" ? "#7C00FF" : "#9F9DA7"}
               strokeWidth="2.2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M11.25 15C11.25 15.9946 11.6451 16.9484 12.3483 17.6517C13.0516 18.3549 14.0054 18.75 15 18.75C15.9946 18.75 16.9484 18.3549 17.6517 17.6517C18.3549 16.9484 18.75 15.9946 18.75 15M11.25 15C11.25 14.0054 11.6451 13.0516 12.3483 12.3483C13.0516 11.6451 14.0054 11.25 15 11.25C15.9946 11.25 16.9484 11.6451 17.6517 12.3483C18.3549 13.0516 18.75 14.0054 18.75 15M11.25 15H3.75M18.75 15H26.25M17 11.75L21.25 5.75M13 18.25L8.75 24.25M8.75 5.75L13 11.75M17 18.25L21.25 24.25"
-              stroke={selectedButton === "jackpot" ? "#7C00FF" : "#9F9DA7"}
+              stroke={props.selected === "jackpot" ? "#7C00FF" : "#9F9DA7"}
               strokeWidth="2.2"
               strokeLinecap="round"
               strokeLinejoin="round"

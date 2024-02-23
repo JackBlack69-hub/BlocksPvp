@@ -1,5 +1,5 @@
 // App.js
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import LeftMenu from "./components/LeftMenu";
 import RightMenu from "./components/RightMenu";
@@ -15,6 +15,7 @@ const divStyle = {
 };
 
 function App() {
+  const [selected, setSelected] = useState("coinflip");
   return (
     <div
       className="main-container"
@@ -26,12 +27,12 @@ function App() {
         paddingTop: "0.25rem",
       }}
     >
-      <Navbar />
+      <Navbar selected={selected} setSelected={setSelected} />
 
       <div
         style={{ flex: 1, display: "flex", justifyContent: "space-between" }}
       >
-        <LeftMenu />
+        <LeftMenu selected={selected} setSelected={setSelected} />
         <div style={divStyle}></div>
         <RightMenu />
       </div>
