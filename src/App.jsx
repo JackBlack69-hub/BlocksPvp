@@ -18,7 +18,13 @@ function App() {
   return (
     <div
       className="main-container"
-      style={{ height: "100vh", display: "flex", flexDirection: "column" }}
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        paddingLeft: "0.4rem",
+        paddingTop: "0.25rem",
+      }}
     >
       <Navbar />
 
