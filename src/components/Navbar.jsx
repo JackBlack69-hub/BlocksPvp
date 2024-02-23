@@ -166,10 +166,10 @@ function Navbar() {
                     padding: "15%",
                     color: "#3AFF4E",
 
-                    background: "linear-gradient(#2D2A40, #322C54)",
+                    background: "#863AFF",
                   }}
                 >
-                  <img src={bellImg}></img>
+                  <img src={bellImg} style={{ background: "#863AFF" }}></img>
                 </button>
               </div>
               <div>
