@@ -20,6 +20,13 @@
   align-items: center;
 }
 
+.depositNumber{
+  display: flex;
+ 
+  align-items: center;
+
+}
+
 .depositNumber,
 .depositText {
   border: transparent;
@@ -27,7 +34,7 @@
 }
 
 .depositNumber {
-  padding: 1.25rem 1.75rem;
+  padding: 0.25rem 1.25rem;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 

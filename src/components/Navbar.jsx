@@ -6,8 +6,10 @@ import UpperNavbar from "./UpperNavbar";
 import { sizing } from "@mui/system";
 import logoImg2 from "./assets/logo2.png";
 import notificationImg from "./assets/notification.svg";
-import bellImg from "./assets/bell.png";
+import bellImg from "./assets/notificationBell.svg";
+import loginImg from "./assets/login.svg";
 import styles from "./Navbar.module.css";
+import robluxImg from "./assets/robux.svg";
 
 function Navbar() {
   const [selectedButton, setSelectedButton] = useState(null);
@@ -137,7 +139,10 @@ function Navbar() {
 
             <div className={styles.deposit}>
               <button className={styles.depositNumber}>
-                786<span>.54</span>
+                <div>
+                  <img src={robluxImg}></img>
+                </div>
+                <div>786.54</div>
               </button>
               <button className={styles.depositText}>Deposit</button>
             </div>
@@ -165,11 +170,10 @@ function Navbar() {
                   style={{
                     padding: "15%",
                     color: "#3AFF4E",
-
-                    background: "#863AFF",
+                    background: "linear-gradient(45deg, #2D2A40, #322C54)",
                   }}
                 >
-                  <img src={bellImg} style={{ background: "#863AFF" }}></img>
+                  <img src={bellImg}></img>
                 </button>
               </div>
               <div>
@@ -192,8 +196,17 @@ function Navbar() {
                   Level 39
                 </div>
               </div>
-              <div>
-                <button>Icon</button>
+              <div style={{ marginRight: "8%" }}>
+                <button
+                  style={{
+                    background: "linear-gradient(45deg, #2D2A40, #322C54)",
+                    padding: "10px",
+                    borderRadius: "7px",
+                  }}
+                >
+                  {" "}
+                  <img src={loginImg}></img>
+                </button>
               </div>
             </div>
           </div>
