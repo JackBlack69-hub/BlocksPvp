@@ -169,14 +169,13 @@ function Navbar(props) {
                         borderWidth: "3px",
                         borderStyle: "solid",
                         borderImageSlice: 1,
-                        borderRadius: "5px",
+                        borderRadius: "8px",
                       }}
                       className={styles.withdraw}
                     >
                       Withdraw
                     </button>
                   </div>
-                  <div>
                     <button
                       style={{
                         display: "flex",
@@ -185,7 +184,7 @@ function Navbar(props) {
                         outline: "transparent",
                         border: "transparent",
 
-                        padding: "0.5rem 1rem",
+                        padding: "0.5rem",
 
                         background: `
                          linear-gradient(rgb(45, 42, 64) 0%, rgba(50, 44, 84) 100%) padding-box, 
@@ -195,13 +194,12 @@ function Navbar(props) {
                         borderWidth: "3px",
                         borderStyle: "solid",
                         borderImageSlice: 1,
-                        borderRadius: "5px",
+                        borderRadius: "8px",
                         marginRight: "1.5rem",
                       }}
                     >
                       <NotificationsIcon style={{ fontSize: "2rem" }} />
                     </button>
-                  </div>
                   <div
                     style={{
                       paddingInline: "1.5rem",

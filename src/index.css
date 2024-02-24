@@ -32,3 +32,16 @@ button,
 select {
   font: inherit;
 }
+
+.shadowEffect {
+  position: relative;
+}
+
+.shadowEffect::before {
+  content: "";
+  position: absolute;
+  inset: var(--inset-value);
+  background: var(--shadow-color);
+  filter: blur(15px);
+  opacity: 0.3;
+}

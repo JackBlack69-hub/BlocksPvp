@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Button } from "@mui/material";
 import twitterImg from "./assets/twitter.png";
 import discordImg from "./assets/discord.png";
-import BasicModal from "./BasicModal";
 
 export default function UpperNavbar() {
   return (
@@ -23,12 +22,26 @@ export default function UpperNavbar() {
           color: "#863AFF",
           fontWeight: "600",
           textShadow: "rgb(60 40 81 / 60%) 0px 4px 4px",
+
+          "--inset-value": "8px",
+          "--shadow-color": "rgb(124, 0, 255)",
         }}
+        className="shadowEffect"
       >
-        {" "}
         1K Raffel
       </Button>
-      <Button style={{ color: "#863AFF" }}> EVENT</Button>
+      <Button
+        style={{
+          color: "#863AFF",
+          fontWeight: 600,
+
+          "--inset-value": "8px",
+          "--shadow-color": "rgb(124, 0, 255)",
+        }}
+        className="shadowEffect"
+      >
+        EVENT
+      </Button>
       <Box
         style={{
           color: "rgba(255, 255, 255, 0.50)",
@@ -97,7 +110,15 @@ export default function UpperNavbar() {
       >
         Terms of Service
       </Button>
-      <Button sx={{ color: "#FFAD33", textTransform: "capitalize" }}>
+      <Button
+        sx={{
+          color: "#FFAD33",
+          textTransform: "capitalize",
+          "--inset-value": "13px",
+          "--shadow-color": "#FFAD33",
+        }}
+        className="shadowEffect"
+      >
         Claims
       </Button>
       <div>
