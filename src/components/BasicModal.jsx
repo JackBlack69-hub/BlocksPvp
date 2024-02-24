@@ -6,6 +6,7 @@ import Modal from "@mui/material/Modal";
 import LoginImg from "./assets/Login.png";
 import { TextField } from "@mui/material";
 import { generate, count } from "random-words";
+import Cookies from "js-cookie";
 import axios from "axios";
 
 const style = {
@@ -76,6 +77,8 @@ export default function BasicModal(props) {
         console.log(response);
         if (response.data.statusCode === 200) {
           props.isLogin(true);
+          props.setUsername(username);
+          Cookies.set("jwtToken", response.token, { expires: 7 });
           setOpen(false);
         }
         console.log(response.data);

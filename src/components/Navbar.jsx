@@ -13,6 +13,7 @@ import BasicModal from "./BasicModal";
 
 function Navbar(props) {
   const [login, isLogin] = useState(false);
+  const [username, setUsername] = React.useState("");
   const handleButtonClick = (button) => {
     console.log("Selected Button:", button);
     props.setSelected(button);
@@ -176,30 +177,30 @@ function Navbar(props) {
                       Withdraw
                     </button>
                   </div>
-                    <button
-                      style={{
-                        display: "flex",
+                  <button
+                    style={{
+                      display: "flex",
 
-                        color: "#863AFF",
-                        outline: "transparent",
-                        border: "transparent",
+                      color: "#863AFF",
+                      outline: "transparent",
+                      border: "transparent",
 
-                        padding: "0.5rem",
+                      padding: "0.5rem",
 
-                        background: `
+                      background: `
                          linear-gradient(rgb(45, 42, 64) 0%, rgba(50, 44, 84) 100%) padding-box, 
                          linear-gradient(#524481 0%, rgba(255, 255, 255, 0) 100%) border-box
                       `,
 
-                        borderWidth: "3px",
-                        borderStyle: "solid",
-                        borderImageSlice: 1,
-                        borderRadius: "8px",
-                        marginRight: "1.5rem",
-                      }}
-                    >
-                      <NotificationsIcon style={{ fontSize: "2rem" }} />
-                    </button>
+                      borderWidth: "3px",
+                      borderStyle: "solid",
+                      borderImageSlice: 1,
+                      borderRadius: "8px",
+                      marginRight: "1.5rem",
+                    }}
+                  >
+                    <NotificationsIcon style={{ fontSize: "2rem" }} />
+                  </button>
                   <div
                     style={{
                       paddingInline: "1.5rem",
@@ -241,7 +242,7 @@ function Navbar(props) {
                           fontWeight: 500,
                         }}
                       >
-                        Use Code - BLOXPVP
+                        {username === "" ? <>Use Code - BLOXPVP</> : username}
                       </div>
                       <div
                         style={{
@@ -272,7 +273,7 @@ function Navbar(props) {
                 </div>{" "}
               </>
             ) : (
-              <BasicModal isLogin={isLogin} />
+              <BasicModal isLogin={isLogin} setUsername={setUsername} />
             )}
           </div>
         </div>

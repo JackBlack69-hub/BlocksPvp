@@ -21,6 +21,7 @@ export default function UpperNavbar() {
           marginLeft: "2rem",
           color: "#863AFF",
           fontWeight: "600",
+          gap: "4px",
 
           "--opacity": "0.1",
           "--inset-value": "8px",
