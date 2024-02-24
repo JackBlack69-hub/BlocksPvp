@@ -194,34 +194,51 @@ function Navbar(props) {
                         borderStyle: "solid",
                         borderImageSlice: 1,
                         borderRadius: "5px",
+                        marginRight: "1.5rem",
                       }}
                     >
                       <NotificationsIcon style={{ fontSize: "2rem" }} />
                     </button>
                   </div>
-                  <div style={{ paddingInline: "1.5rem", display: "flex" }}>
+                  <div
+                    style={{
+                      paddingInline: "1.5rem",
+                      display: "flex",
+                      gap: "1rem",
+                    }}
+                  >
                     <div
                       style={{
                         borderRadius: "50%",
                         border: "1px solid #8000FF",
                         background:
                           "linear-gradient(180deg, #25273B 0%, #452FC9 100%)",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        aspectRatio: "1/1",
+                        width: "50px",
                       }}
                     >
-                      <img src={logoImg2}></img>
+                      <img
+                        src={logoImg2}
+                        style={{
+                          width: "100%",
+                        }}
+                        alt="swords"
+                      ></img>
                     </div>
                     <div
                       style={{
                         display: "flex",
                         flexDirection: "column",
-                        paddingLeft: "10px",
                         paddingRight: "10px",
                       }}
                     >
                       <div
                         style={{
                           fontSize: "1.2rem",
-                          fontWeight: 600,
+                          fontWeight: 500,
                         }}
                       >
                         Use Code - BLOXPVP
