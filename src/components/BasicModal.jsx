@@ -17,6 +17,7 @@ const style = {
 
   bgcolor: "background.paper",
   border: "2px solid #000",
+  borderRadius: "30px",
 };
 const headingStyles = {
   color: "#FFF",

@@ -43,5 +43,5 @@ select {
   inset: var(--inset-value);
   background: var(--shadow-color);
   filter: blur(15px);
-  opacity: 0.3;
+  opacity: var(--opacity);
 }

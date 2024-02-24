@@ -21,8 +21,8 @@ export default function UpperNavbar() {
           marginLeft: "2rem",
           color: "#863AFF",
           fontWeight: "600",
-          textShadow: "rgb(60 40 81 / 60%) 0px 4px 4px",
 
+          "--opacity": "0.1",
           "--inset-value": "8px",
           "--shadow-color": "rgb(124, 0, 255)",
         }}
@@ -35,6 +35,7 @@ export default function UpperNavbar() {
           color: "#863AFF",
           fontWeight: 600,
 
+          "--opacity": "0.1",
           "--inset-value": "8px",
           "--shadow-color": "rgb(124, 0, 255)",
         }}
@@ -114,6 +115,7 @@ export default function UpperNavbar() {
         sx={{
           color: "#FFAD33",
           textTransform: "capitalize",
+          "--opacity": "0.3",
           "--inset-value": "13px",
           "--shadow-color": "#FFAD33",
         }}
