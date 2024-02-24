@@ -9,8 +9,10 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import LogoutIcon from "@mui/icons-material/Logout";
 import styles from "./Navbar.module.css";
 import robluxImg from "./assets/robux.svg";
+import BasicModal from "./BasicModal";
 
 function Navbar(props) {
+  const login = true;
   const handleButtonClick = (button) => {
     console.log("Selected Button:", button);
     props.setSelected(button);
@@ -135,120 +137,126 @@ function Navbar(props) {
               </div>
             </div>
 
-            <div className={styles.deposit}>
-              <button className={styles.depositNumber}>
-                <div>
-                  <img src={robluxImg}></img>
+            {login === true ? (
+              <>
+                {" "}
+                <div className={styles.deposit}>
+                  <button className={styles.depositNumber}>
+                    <div>
+                      <img src={robluxImg}></img>
+                    </div>
+                    <div>786.54</div>
+                  </button>
+                  <button className={styles.depositText}>Deposit</button>
                 </div>
-                <div>786.54</div>
-              </button>
-              <button className={styles.depositText}>Deposit</button>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div style={{ paddingRight: "21px" }}>
-                <button
+                <div
                   style={{
-                    color: "#3AFF4E",
-                    background: `
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <div style={{ paddingRight: "21px" }}>
+                    <button
+                      style={{
+                        color: "#3AFF4E",
+                        background: `
                         linear-gradient(to right, rgb(47, 85, 44), rgb(44, 84, 46)) padding-box, 
                         linear-gradient(rgb(70 181 81 / 78%) 0%, rgba(255, 255, 255, 0) 100%) border-box
                     `,
-                    borderWidth: "3px",
-                    borderStyle: "solid",
-                    borderImageSlice: 1,
-                    borderRadius: "5px",
-                  }}
-                  className={styles.withdraw}
-                >
-                  Withdraw
-                </button>
-              </div>
-              <div>
-                <button
-                  style={{
-                    display: "flex",
+                        borderWidth: "3px",
+                        borderStyle: "solid",
+                        borderImageSlice: 1,
+                        borderRadius: "5px",
+                      }}
+                      className={styles.withdraw}
+                    >
+                      Withdraw
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      style={{
+                        display: "flex",
 
-                    color: "#863AFF",
-                    outline: "transparent",
-                    border: "transparent",
+                        color: "#863AFF",
+                        outline: "transparent",
+                        border: "transparent",
 
-                    padding: "0.5rem 1rem",
+                        padding: "0.5rem 1rem",
 
-                    background: `
+                        background: `
                          linear-gradient(rgb(45, 42, 64) 0%, rgba(50, 44, 84) 100%) padding-box, 
                          linear-gradient(#524481 0%, rgba(255, 255, 255, 0) 100%) border-box
                       `,
 
-                    borderWidth: "3px",
-                    borderStyle: "solid",
-                    borderImageSlice: 1,
-                    borderRadius: "5px",
-                  }}
-                >
-                  <NotificationsIcon style={{ fontSize: "2rem" }} />
-                </button>
-              </div>
-              <div style={{ paddingInline: "1.5rem", display: "flex" }}>
-                <div
-                  style={{
-                    borderRadius: "50%",
-                    border: "1px solid #8000FF",
-                    background:
-                      "linear-gradient(180deg, #25273B 0%, #452FC9 100%)",
-                  }}
-                >
-                  <img src={logoImg2}></img>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    paddingLeft: "10px",
-                    paddingRight: "10px",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "1.2rem",
-                      fontWeight: 600,
-                    }}
-                  >
-                    Use Code - BLOXPVP
+                        borderWidth: "3px",
+                        borderStyle: "solid",
+                        borderImageSlice: 1,
+                        borderRadius: "5px",
+                      }}
+                    >
+                      <NotificationsIcon style={{ fontSize: "2rem" }} />
+                    </button>
                   </div>
-                  <div
-                    style={{
-                      color: "#8000FF",
-                      fontSize: "1.1rem",
-                    }}
-                  >
-                    Level 39
+                  <div style={{ paddingInline: "1.5rem", display: "flex" }}>
+                    <div
+                      style={{
+                        borderRadius: "50%",
+                        border: "1px solid #8000FF",
+                        background:
+                          "linear-gradient(180deg, #25273B 0%, #452FC9 100%)",
+                      }}
+                    >
+                      <img src={logoImg2}></img>
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        paddingLeft: "10px",
+                        paddingRight: "10px",
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontSize: "1.2rem",
+                          fontWeight: 600,
+                        }}
+                      >
+                        Use Code - BLOXPVP
+                      </div>
+                      <div
+                        style={{
+                          color: "#8000FF",
+                          fontSize: "1.1rem",
+                        }}
+                      >
+                        Level 39
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div>
-                <button
-                  style={{
-                    color: "#863AFF",
-                    outline: "transparent",
-                    border: "transparent",
-                    borderRadius: "5px",
-                    padding: "0.5rem 1rem",
-                    background:
-                      "linear-gradient(180deg, #2D2A40 0%, #322C54 100%)",
-                    display: "flex",
-                  }}
-                >
-                  <LogoutIcon style={{ fontSize: "2rem" }} />
-                </button>
-              </div>
-            </div>
+                  <div>
+                    <button
+                      style={{
+                        color: "#863AFF",
+                        outline: "transparent",
+                        border: "transparent",
+                        borderRadius: "5px",
+                        padding: "0.5rem 1rem",
+                        background:
+                          "linear-gradient(180deg, #2D2A40 0%, #322C54 100%)",
+                        display: "flex",
+                      }}
+                    >
+                      <LogoutIcon style={{ fontSize: "2rem" }} />
+                    </button>
+                  </div>
+                </div>{" "}
+              </>
+            ) : (
+              <BasicModal />
+            )}
           </div>
         </div>
       </div>

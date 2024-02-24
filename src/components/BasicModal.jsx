@@ -84,9 +84,9 @@ export default function BasicModal() {
 
   return (
     <div style={{ display: "inline" }}>
-      {/* <Button style={{ float: "right" }} onClick={handleOpen}>
+      <Button style={{ float: "right" }} onClick={handleOpen}>
         Login
-      </Button> */}
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
