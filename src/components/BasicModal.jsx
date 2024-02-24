@@ -40,7 +40,7 @@ const styleInModal = {
   display: "flex",
 };
 
-export default function BasicModal() {
+export default function BasicModal(props) {
   const [open, setOpen] = React.useState(false);
   const [generatedCode, setGeneratedCode] = React.useState("");
   const [username, setUsername] = React.useState("");
@@ -73,6 +73,7 @@ export default function BasicModal() {
       .then((response) => {
         console.log(response);
         if (response.data.statusCode === 200) {
+          props.isLogin(true);
           setOpen(false);
         }
         console.log(response.data);

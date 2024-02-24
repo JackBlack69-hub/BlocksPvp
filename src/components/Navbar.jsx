@@ -12,7 +12,7 @@ import robluxImg from "./assets/robux.svg";
 import BasicModal from "./BasicModal";
 
 function Navbar(props) {
-  const login = true;
+  const [login, isLogin] = useState(false);
   const handleButtonClick = (button) => {
     console.log("Selected Button:", button);
     props.setSelected(button);
@@ -274,7 +274,7 @@ function Navbar(props) {
                 </div>{" "}
               </>
             ) : (
-              <BasicModal />
+              <BasicModal isLogin={isLogin} />
             )}
           </div>
         </div>
