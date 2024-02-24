@@ -5,9 +5,8 @@ import logo from "./assets/Logopvp.png";
 import UpperNavbar from "./UpperNavbar";
 import { sizing } from "@mui/system";
 import logoImg2 from "./assets/logo2.png";
-import notificationImg from "./assets/notification.svg";
-import bellImg from "./assets/notificationBell.svg";
-import loginImg from "./assets/login.svg";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import LogoutIcon from "@mui/icons-material/Logout";
 import styles from "./Navbar.module.css";
 import robluxImg from "./assets/robux.svg";
 
@@ -46,6 +45,7 @@ function Navbar(props) {
               justifyContent: "space-between",
               color: "white",
               paddingBlock: "1rem",
+              paddingRight: "1.5rem",
             }}
           >
             <div
@@ -166,44 +166,70 @@ function Navbar(props) {
               <div style={{ paddingRight: "21px" }}>
                 <button
                   style={{
-                    padding: "15%",
-                    color: "#3AFF4E",
-                    background: "linear-gradient(45deg, #2D2A40, #322C54)",
+                    color: "#863AFF",
+                    outline: "transparent",
+                    border: "transparent",
+                    borderRadius: "5px",
+                    padding: "0.5rem 1rem",
+                    background:
+                      "linear-gradient(180deg, #2D2A40 0%, #322C54 100%)",
+                    display: "flex",
                   }}
                 >
-                  <img src={bellImg}></img>
+                  <NotificationsIcon style={{ fontSize: "2rem" }} />
                 </button>
               </div>
-              <div>
-                <img src={logoImg2}></img>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  paddingLeft: "10px",
-                  paddingRight: "10px",
-                }}
-              >
-                <div>Use Code - BLOXPVP</div>
+              <div style={{ paddingInline: "1.5rem", display: "flex" }}>
                 <div
                   style={{
-                    color: "#8000FF",
+                    borderRadius: "50%",
+                    border: "1px solid #8000FF",
+                    background:
+                      "linear-gradient(180deg, #25273B 0%, #452FC9 100%)",
                   }}
                 >
-                  Level 39
+                  <img src={logoImg2}></img>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    paddingLeft: "10px",
+                    paddingRight: "10px",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "1.2rem",
+                      fontWeight: 600,
+                    }}
+                  >
+                    Use Code - BLOXPVP
+                  </div>
+                  <div
+                    style={{
+                      color: "#8000FF",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Level 39
+                  </div>
                 </div>
               </div>
-              <div style={{ marginRight: "8%" }}>
+              <div>
                 <button
                   style={{
-                    background: "linear-gradient(45deg, #2D2A40, #322C54)",
-                    padding: "10px",
-                    borderRadius: "7px",
+                    color: "#863AFF",
+                    outline: "transparent",
+                    border: "transparent",
+                    borderRadius: "5px",
+                    padding: "0.5rem 1rem",
+                    background:
+                      "linear-gradient(180deg, #2D2A40 0%, #322C54 100%)",
+                    display: "flex",
                   }}
                 >
-                  {" "}
-                  <img src={loginImg}></img>
+                  <LogoutIcon style={{ fontSize: "2rem" }} />
                 </button>
               </div>
             </div>
