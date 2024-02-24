@@ -67,6 +67,7 @@ function Navbar(props) {
                     flexDirection: "row",
                     gap: 4,
                     fontSize: "1.25rem",
+                    textTransform: "none",
                   }}
                   onClick={() => handleButtonClick("coinflip")}
                   button
@@ -99,6 +100,7 @@ function Navbar(props) {
                     flexDirection: "row",
                     gap: 4,
                     fontSize: "1.25rem",
+                    textTransform: "none",
                   }}
                   onClick={() => handleButtonClick("jackpot")}
                   button

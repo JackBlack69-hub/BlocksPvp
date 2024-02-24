@@ -29,6 +29,8 @@ function LeftMenu(props) {
             backgroundColor: "transparent",
             flexDirection: "column",
             padding: 28,
+            textTransform: "none",
+            fontSize: "1.2rem",
           }}
           onClick={() => handleButtonClick("coinflip")}
           button
@@ -53,7 +55,7 @@ function LeftMenu(props) {
               fill={props.selected === "jackpot" ? "#9F9DA7" : "#7C00FF"}
             />
           </svg>
-          <div style={{ paddingTop: 15 }}>coinflip</div>
+          <div style={{ paddingTop: 15 }}>Coinflip</div>
         </Button>
         <Button
           style={{
@@ -61,6 +63,8 @@ function LeftMenu(props) {
             backgroundColor: "transparent",
             flexDirection: "column",
             padding: 28,
+            textTransform: "none",
+            fontSize: "1.2rem",
           }}
           onClick={() => handleButtonClick("jackpot")}
           button
@@ -96,7 +100,7 @@ function LeftMenu(props) {
             />
           </svg>
 
-          <div style={{ paddingTop: 15 }}>jackpot</div>
+          <div style={{ paddingTop: 15 }}>Jackpot</div>
         </Button>
       </List>
 
