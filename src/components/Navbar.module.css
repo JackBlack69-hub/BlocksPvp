@@ -12,6 +12,8 @@
 
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+
+  filter: drop-shadow(0 0 13px rgb(124, 0, 255));
 }
 
 .deposit {
@@ -20,11 +22,10 @@
   align-items: center;
 }
 
-.depositNumber{
+.depositNumber {
   display: flex;
- 
-  align-items: center;
 
+  align-items: center;
 }
 
 .depositNumber,
