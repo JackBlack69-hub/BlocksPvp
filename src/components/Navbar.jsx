@@ -165,8 +165,8 @@ function Navbar(props) {
                       style={{
                         color: "#3AFF4E",
                         background: `
-                        linear-gradient(to right, rgb(47, 85, 44), rgb(44, 84, 46)) padding-box, 
-                        linear-gradient(rgb(70 181 81 / 78%) 0%, rgba(255, 255, 255, 0) 100%) border-box
+                        linear-gradient(to bottom, rgb(47, 85, 44), #307232 ) padding-box, 
+                        linear-gradient(#5da857 0%, #307232 100%) border-box
                     `,
                         borderWidth: "3px",
                         borderStyle: "solid",
@@ -191,7 +191,7 @@ function Navbar(props) {
 
                       background: `
                          linear-gradient(rgb(45, 42, 64) 0%, rgba(50, 44, 84) 100%) padding-box, 
-                         linear-gradient(#524481 0%, rgba(255, 255, 255, 0) 100%) border-box
+                         linear-gradient(#595380 0%, #332d55 100%) border-box
                       `,
 
                       borderWidth: "3px",
@@ -199,7 +199,12 @@ function Navbar(props) {
                       borderImageSlice: 1,
                       borderRadius: "8px",
                       marginRight: "1.5rem",
+                      "--opacity": "0.5",
+                      "--inset-value": "6px",
+                      "--shadow-color": "rgb(124, 0, 255)",
+                      "--border-radius": "50%",
                     }}
+                    className="shadowEffect"
                   >
                     <NotificationsIcon style={{ fontSize: "2rem" }} />
                   </button>

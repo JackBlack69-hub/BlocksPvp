@@ -44,4 +44,6 @@ select {
   background: var(--shadow-color);
   filter: blur(15px);
   opacity: var(--opacity);
+
+  border-radius: var(--border-radius, 0);
 }
