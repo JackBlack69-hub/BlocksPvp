@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { socket } from "../socket";
 import {
   Drawer,
   Paper,
@@ -39,6 +40,15 @@ function RightMenu() {
     },
   ]);
 
+  useEffect(() => {
+    console.log("Triggers");
+
+    socket.on("discussion_message", (data) => {
+      console.log("Data", data);
+      setChatMessages([...chatMessages, { text: data.text, user: data.user }]);
+    });
+  }, [chatMessages]);
+
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
       const newMessage = {
@@ -46,6 +56,8 @@ function RightMenu() {
         text: inputValue,
         time: "10:58",
       };
+
+      socket.emit("discussion_send_message", newMessage);
 
       setChatMessages([...chatMessages, newMessage]);
       setInputValue("");

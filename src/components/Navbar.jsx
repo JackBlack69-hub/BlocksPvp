@@ -12,7 +12,7 @@ import robluxImg from "./assets/robux.svg";
 import BasicModal from "./BasicModal";
 
 function Navbar(props) {
-  const [login, isLogin] = useState(true);
+  const [login, isLogin] = useState(false);
   const [username, setUsername] = React.useState("");
   const handleButtonClick = (button) => {
     console.log("Selected Button:", button);
