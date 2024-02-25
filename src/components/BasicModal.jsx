@@ -78,7 +78,7 @@ export default function BasicModal(props) {
         if (response.data.statusCode === 200) {
           props.isLogin(true);
           props.setUsername(username);
-          Cookies.set("jwtToken", response.token, { expires: 7 });
+          Cookies.set("jwtToken", response.data.token, { expires: 7 });
           setOpen(false);
         }
         console.log(response.data);

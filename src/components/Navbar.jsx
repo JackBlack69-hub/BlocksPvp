@@ -10,12 +10,31 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import styles from "./Navbar.module.css";
 import robluxImg from "./assets/robux.svg";
 import BasicModal from "./BasicModal";
+import Cookies from "js-cookie";
+import axios from "axios";
 
 function Navbar(props) {
   const [login, isLogin] = useState(false);
+  const storedJwtToken = Cookies.get("jwtToken");
+
   const [username, setUsername] = React.useState("");
+
+  if (storedJwtToken) {
+    axios
+      .get("http://localhost:9000/api/user/getUser", {
+        headers: {
+          // Your headers go here
+          Authorization: `Bearer ${storedJwtToken}`, // Example: Sending an authorization token
+          // Other headers...
+        },
+      })
+      .then((response) => {
+        setUsername(response.data.decoded.username);
+        isLogin(true);
+      });
+  }
+
   const handleButtonClick = (button) => {
-    console.log("Selected Button:", button);
     props.setSelected(button);
   };
 

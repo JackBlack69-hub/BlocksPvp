@@ -14,6 +14,8 @@ import SendIcon from "@mui/icons-material/Send";
 import styles from "./RightMenu.module.css";
 import pfpImg from "./assets/pfp.png";
 import usaIcon from "./assets/usaIcon.png";
+import axios from "axios";
+import Cookies from "js-cookie";
 
 function RightMenu() {
   const [inputValue, setInputValue] = useState("");
@@ -39,6 +41,23 @@ function RightMenu() {
       time: "10:58",
     },
   ]);
+  const storedJwtToken = Cookies.get("jwtToken");
+
+  let user = "";
+
+  if (storedJwtToken) {
+    axios
+      .get("http://localhost:9000/api/user/getUser", {
+        headers: {
+          // Your headers go here
+          Authorization: `Bearer ${storedJwtToken}`, // Example: Sending an authorization token
+          // Other headers...
+        },
+      })
+      .then((response) => {
+        user = response.data.decoded.username;
+      });
+  }
 
   useEffect(() => {
     console.log("Triggers");
@@ -52,7 +71,7 @@ function RightMenu() {
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
       const newMessage = {
-        user: "NormsDemise",
+        user: user === "" ? "Guest" : user,
         text: inputValue,
         time: "10:58",
       };
