@@ -1,6 +1,6 @@
 // Navbar.js
 import React, { useState } from "react";
-import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import logo from "./assets/Logopvp.png";
 import UpperNavbar from "./UpperNavbar";
 import { sizing } from "@mui/system";
@@ -12,7 +12,7 @@ import robluxImg from "./assets/robux.svg";
 import BasicModal from "./BasicModal";
 
 function Navbar(props) {
-  const [login, isLogin] = useState(false);
+  const [login, isLogin] = useState(true);
   const [username, setUsername] = React.useState("");
   const handleButtonClick = (button) => {
     console.log("Selected Button:", button);
@@ -142,13 +142,14 @@ function Navbar(props) {
 
             {login === true ? (
               <>
-                {" "}
                 <div className={styles.deposit}>
                   <button className={styles.depositNumber}>
-                    <div>
+                    <div style={{ display: "flex" }}>
                       <img src={robluxImg}></img>
                     </div>
-                    <div>786.54</div>
+                    <p>
+                      786<span>.54</span>
+                    </p>
                   </button>
                   <button className={styles.depositText}>Deposit</button>
                 </div>
@@ -171,6 +172,7 @@ function Navbar(props) {
                         borderStyle: "solid",
                         borderImageSlice: 1,
                         borderRadius: "8px",
+                        fontWeight: 500,
                       }}
                       className={styles.withdraw}
                     >
