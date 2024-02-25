@@ -13,6 +13,8 @@ export default function UpperNavbar() {
         // display: "block",
         display: "flex",
         alignItems: "center",
+        paddingBottom: "0.25rem",
+        gap: "1.5rem",
       }}
     >
       <Button
@@ -47,7 +49,7 @@ export default function UpperNavbar() {
       <Box
         style={{
           color: "rgba(255, 255, 255, 0.50)",
-          paddingInline: "4rem",
+          paddingInline: "5rem",
           paddingBlock: 0,
           boxShadow:
             "2px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
@@ -124,7 +126,11 @@ export default function UpperNavbar() {
       >
         Claims
       </Button>
-      <div>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
         <button
           size="small"
           style={{
@@ -132,14 +138,20 @@ export default function UpperNavbar() {
             border: "0",
             cursor: "pointer",
             paddingTop: "1px",
+            display: "flex",
           }}
         >
-          <img src={twitterImg}></img>
+          <img src={twitterImg} alt="twitter logo"></img>
         </button>
         <button
-          style={{ backgroundColor: "#0D0B1B", border: "0", cursor: "pointer" }}
+          style={{
+            backgroundColor: "#0D0B1B",
+            border: "0",
+            cursor: "pointer",
+            display: "flex",
+          }}
         >
-          <img src={discordImg}></img>
+          <img src={discordImg} alt="discord logo"></img>
         </button>
       </div>
       {/* <BasicModal /> */}
