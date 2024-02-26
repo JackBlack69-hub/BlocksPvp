@@ -199,10 +199,8 @@ function RightMenu() {
         <List
           style={{
             marginTop: "auto",
-            marginBottom: "10px",
             overflowY: "auto",
             flexGrow: 1,
-            position: "static",
           }}
         >
           <div className={styles.topShadow}></div>
