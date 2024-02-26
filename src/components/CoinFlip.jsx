@@ -30,10 +30,11 @@ function CoinFlip() {
           style={{
             color: "white",
             margin: "1%",
-            marginLeft: "0",
+
             background: "linear-gradient(180deg, #19182C 0%, #2F214F 100%)",
             width: "100%",
             padding: "2%",
+            marginLeft: "0",
           }}
         >
           Test
@@ -66,7 +67,7 @@ function CoinFlip() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          width: "96%",
+          width: "100%",
           background: "linear-gradient(180deg, #19182C 0%, #2F214F 100%)",
           color: "white",
           padding: "2%",
@@ -83,7 +84,7 @@ function CoinFlip() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          width: "96%",
+          width: "100%",
           background: "linear-gradient(180deg, #19182C 0%, #2F214F 100%)",
           color: "white",
           padding: "2%",

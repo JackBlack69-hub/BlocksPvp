@@ -14,7 +14,7 @@ const divStyle = {
 
   flexDirection: "column",
 
-  mixBlendMode: "luminosity",
+  // mixBlendMode: "luminosity",
   border: "3px solid #322E58",
 };
 
