@@ -1,0 +1,103 @@
+import React from "react";
+import HTCombineImg from "./assets/Combine.png";
+
+function CoinFlip() {
+  return (
+    <div style={{ margin: "4%" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+        }}
+      >
+        <div style={{ color: "white" }}>
+          <button>Create Game</button> <button>History</button>
+        </div>
+        <div style={{ color: "white" }}>
+          <img src={HTCombineImg}></img>
+          <button>Highest to Lowest</button> <button>MM2</button>
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+        }}
+      >
+        <div
+          style={{
+            color: "white",
+            margin: "1%",
+            marginLeft: "0",
+            background: "linear-gradient(180deg, #19182C 0%, #2F214F 100%)",
+            width: "100%",
+            padding: "2%",
+          }}
+        >
+          Test
+        </div>
+        <div
+          style={{
+            color: "white",
+            margin: "1%",
+            background: "linear-gradient(180deg, #19182C 0%, #2F214F 100%)",
+            width: "100%",
+            padding: "2%",
+          }}
+        >
+          Test
+        </div>
+        <div
+          style={{
+            color: "white",
+            margin: "1%",
+            background: "linear-gradient(180deg, #19182C 0%, #2F214F 100%)",
+            width: "100%",
+            padding: "2%",
+            marginRight: "0",
+          }}
+        >
+          Test
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "96%",
+          background: "linear-gradient(180deg, #19182C 0%, #2F214F 100%)",
+          color: "white",
+          padding: "2%",
+          marginTop: "1%",
+        }}
+      >
+        <div>Text</div>
+        <div>Text</div>
+        <div>Text</div>
+        <div>Text</div>
+        <div>Text</div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "96%",
+          background: "linear-gradient(180deg, #19182C 0%, #2F214F 100%)",
+          color: "white",
+          padding: "2%",
+          marginTop: "1%",
+        }}
+      >
+        <div>Text</div>
+        <div>Text</div>
+        <div>Text</div>
+        <div>Text</div>
+        <div>Text</div>
+      </div>
+    </div>
+  );
+}
+
+export default CoinFlip;

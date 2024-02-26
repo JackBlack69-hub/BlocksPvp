@@ -4,11 +4,15 @@ import Navbar from "./components/Navbar";
 import LeftMenu from "./components/LeftMenu";
 import RightMenu from "./components/RightMenu";
 import backImg from "./components/assets/bg.png";
+import CoinFlip from "./components/CoinFlip";
 
 const divStyle = {
   background: `url(${backImg}) #19172C 50% / cover no-repeat`,
   width: "100%",
   height: "100%",
+  display: "flex",
+
+  flexDirection: "column",
 
   mixBlendMode: "luminosity",
   border: "3px solid #322E58",
@@ -39,7 +43,9 @@ function App() {
         }}
       >
         <LeftMenu selected={selected} setSelected={setSelected} />
-        <div style={divStyle}></div>
+        <div style={divStyle}>
+          <CoinFlip />
+        </div>
         <RightMenu />
       </div>
     </div>
