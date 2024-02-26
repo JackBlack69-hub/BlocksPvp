@@ -20,6 +20,7 @@ function App() {
     <div
       className="main-container"
       style={{
+        width: "100%",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -30,7 +31,12 @@ function App() {
       <Navbar selected={selected} setSelected={setSelected} />
 
       <div
-        style={{ flex: 1, display: "flex", justifyContent: "space-between" }}
+        style={{
+          flex: 1,
+          display: "flex",
+          justifyContent: "space-between",
+          overflow: "auto",
+        }}
       >
         <LeftMenu selected={selected} setSelected={setSelected} />
         <div style={divStyle}></div>

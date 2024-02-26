@@ -93,7 +93,7 @@ function RightMenu() {
     <Drawer
       variant="permanent"
       anchor="right"
-      style={{ flexBasis: "25%", backgroundColor: "#0F0C1F" }}
+      style={{ flexBasis: "25%", backgroundColor: "#0F0C1F", overflow: "auto" }}
       PaperProps={{
         sx: {
           backgroundColor: "#19172C",
@@ -104,7 +104,14 @@ function RightMenu() {
       }}
     >
       {/* Icon buttons */}
-      <div style={{ display: "flex", padding: 10, background: "#120e25" }}>
+      <div
+        style={{
+          display: "flex",
+          padding: 10,
+          background: "#120e25",
+          overflow: "auto",
+        }}
+      >
         <Button
           style={{
             background: "linear-gradient(180deg, #1A182E 0%, #1F1736 100%)",
@@ -186,13 +193,13 @@ function RightMenu() {
         style={{
           position: "relative",
           flexGrow: 1,
+          overflow: "auto",
         }}
       >
         <List
           style={{
             marginTop: "auto",
             marginBottom: "10px",
-            height: "70vh",
             overflowY: "auto",
             flexGrow: 1,
             position: "static",
