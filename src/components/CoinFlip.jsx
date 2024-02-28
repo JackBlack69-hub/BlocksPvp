@@ -1,5 +1,6 @@
 import React from "react";
 import HTCombineImg from "./assets/Combine.png";
+import CreateGameModal from "./CreateGameModal";
 
 function CoinFlip() {
   return (
@@ -12,7 +13,7 @@ function CoinFlip() {
         }}
       >
         <div style={{ color: "white" }}>
-          <button>Create Game</button> <button>History</button>
+          <CreateGameModal />
         </div>
         <div style={{ color: "white" }}>
           <img src={HTCombineImg}></img>
