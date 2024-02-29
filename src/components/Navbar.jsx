@@ -14,7 +14,7 @@ import Cookies from "js-cookie";
 import axios from "axios";
 
 function Navbar(props) {
-  const [login, isLogin] = useState(false);
+  const [login, isLogin] = useState(true);
   const storedJwtToken = Cookies.get("jwtToken");
 
   const [username, setUsername] = React.useState("");

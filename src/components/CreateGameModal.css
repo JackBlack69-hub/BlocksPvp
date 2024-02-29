@@ -1,3 +1,32 @@
 .react-responsive-modal-modal {
-    width: 100vh;
-  }
+  width: 100vh;
+}
+
+.create-game-btn {
+  outline: transparent;
+  border: transparent;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+
+  font-size: 1rem;
+  filter: drop-shadow(0px 0px 19px rgba(0, 255, 25, 0.1));
+  color: white;
+
+  font-weight: 500;
+  background: linear-gradient(180deg, #2f552c 0%, #2c542e 100%);
+}
+
+.history-btn {
+  color: white;
+  background: transparent;
+
+  padding: 1rem 4rem;
+
+  outline: transparent;
+  border: transparent;
+  border-radius: 5px;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+

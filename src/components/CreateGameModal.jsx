@@ -12,7 +12,24 @@ function CreateGameModal() {
 
   return (
     <div>
-      <button onClick={onOpenModal}>Create Game</button>
+      <button
+        onClick={onOpenModal}
+        style={{
+          background: `
+                        linear-gradient(to bottom, #873AFF, #873AFF ) padding-box, 
+                        linear-gradient(#fd8eff 0%, #8c3cff 100%) border-box
+                    `,
+          borderWidth: "3px",
+          borderStyle: "solid",
+          borderImageSlice: 1,
+          borderRadius: "13px",
+          fontWeight: 500,
+        }}
+        className="create-game-btn"
+      >
+        Create Game
+      </button>
+      <button className="history-btn">History</button>
       <Modal open={open} onClose={onCloseModal} showCloseIcon={false} center>
         <div
           style={{

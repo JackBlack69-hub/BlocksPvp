@@ -4,7 +4,7 @@ import CreateGameModal from "./CreateGameModal";
 
 function CoinFlip() {
   return (
-    <div style={{ margin: "4%" }}>
+    <div style={{ margin: "2rem 3rem" }}>
       <div
         style={{
           display: "flex",
