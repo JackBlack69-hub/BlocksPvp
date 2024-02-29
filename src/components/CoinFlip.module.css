@@ -1,0 +1,27 @@
+.highestToLowest {
+  outline: transparent;
+  border: transparent;
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+
+  font-size: 1rem;
+  filter: drop-shadow(0px 0px 19px rgba(0, 255, 25, 0.1));
+  color: white;
+
+  font-weight: 500;
+  background: linear-gradient(180deg, #2f552c 0%, #2c542e 100%);
+}
+
+.mm2Btn {
+  outline: transparent;
+  border: transparent;
+  border-radius: 5px;
+  padding: 0.75rem 4rem;
+
+  font-size: 1rem;
+  filter: drop-shadow(0px 0px 19px rgba(0, 255, 25, 0.1));
+  color: white;
+
+  font-weight: 500;
+  background: linear-gradient(180deg, #2f552c 0%, #2c542e 100%);
+}

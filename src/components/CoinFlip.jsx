@@ -1,6 +1,7 @@
 import React from "react";
 import HTCombineImg from "./assets/Combine.png";
 import CreateGameModal from "./CreateGameModal";
+import styles from "./CoinFlip.module.css";
 
 function CoinFlip() {
   return (
@@ -25,7 +26,38 @@ function CoinFlip() {
           }}
         >
           <img src={HTCombineImg}></img>
-          <button>Highest to Lowest</button> <button>MM2</button>
+          <button
+            style={{
+              background: `
+                        linear-gradient(to bottom, #ffbf5f, #dc7700 ) padding-box, 
+                        linear-gradient(#ffeda0 0%, #dc7701 100%) border-box
+                    `,
+              borderWidth: "3px",
+              borderStyle: "solid",
+              borderImageSlice: 1,
+              borderRadius: "13px",
+              fontWeight: 500,
+            }}
+            className={styles.highestToLowest}
+          >
+            Highest to Lowest
+          </button>
+          <button
+            style={{
+              background: `
+                        linear-gradient(to bottom, #873AFF, #873AFF ) padding-box, 
+                        linear-gradient(#fd8eff 0%, #8c3cff 100%) border-box
+                    `,
+              borderWidth: "3px",
+              borderStyle: "solid",
+              borderImageSlice: 1,
+              borderRadius: "13px",
+              fontWeight: 500,
+            }}
+            className={styles.mm2Btn}
+          >
+            MM2
+          </button>
         </div>
       </div>
       <div
