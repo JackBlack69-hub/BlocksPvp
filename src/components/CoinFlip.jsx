@@ -15,7 +15,15 @@ function CoinFlip() {
         <div style={{ color: "white" }}>
           <CreateGameModal />
         </div>
-        <div style={{ color: "white" }}>
+        <div
+          style={{
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "2rem ",
+          }}
+        >
           <img src={HTCombineImg}></img>
           <button>Highest to Lowest</button> <button>MM2</button>
         </div>
