@@ -28,7 +28,6 @@ function App() {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
-        paddingLeft: "0.4rem",
         paddingTop: "0.25rem",
       }}
     >
@@ -40,6 +39,7 @@ function App() {
           display: "flex",
           justifyContent: "space-between",
           overflow: "auto",
+          paddingLeft: "0.4rem",
         }}
       >
         <LeftMenu selected={selected} setSelected={setSelected} />

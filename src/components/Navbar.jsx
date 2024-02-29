@@ -45,6 +45,7 @@ function Navbar(props) {
         paddingRight: "0",
         paddingLeft: "0",
         display: "block",
+        marginLeft: "0.4rem",
       }}
       className={styles.navbar}
     >
