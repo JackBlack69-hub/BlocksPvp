@@ -12,7 +12,8 @@
   background: linear-gradient(180deg, #2f552c 0%, #2c542e 100%);
 }
 
-.mm2Btn {
+.mm2Btn,
+.joinBtn {
   outline: transparent;
   border: transparent;
   border-radius: 5px;
